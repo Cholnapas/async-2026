@@ -7,7 +7,7 @@ async def runner(name, speed):
     return f"{name} crossed line!"
 
 async def main():
-    # 
+    # CASE A
     print(f"{ctime()} --- Starting gather() approach (Unified Aggregation) ---")
     all_finishes = await asyncio.gather(runner("A", 0.5), runner("B", 2.0))
     print(f"{ctime()} Gather output: {all_finishes}\n")

@@ -15,7 +15,7 @@ async def main():
     }
     
     # 
-    done, pending = await asyncio.wait(tasks, return_when=asyncio.FIRST_COMPLETED)
+    done, pending = await asyncio.wait(tasks, return_when=asyncio.FIRST_EXCEPTION)
     
     print(f"{ctime()} Count of Tasks Done: {len(done)}")       # 
     print(f"{ctime()} Count of Tasks Pending: {len(pending)}") # 
